@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #afd9f5;
+}
+
+.card {
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+    will-change: transform;
+  }
+  
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover\:scale-110:hover {
+    transform: scale(1.1);
+  }
+  
+  /* For Chrome/Safari optimization */
+  .transform-gpu {
+    transform: translateZ(0);
+  }
+
+  .modal-enter-active, .modal-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .modal-enter-from,
+  .modal-leave-to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  /* Modal content animation */
+  .modal-content-enter-active {
+    transition: all 0.3s ease-out;
+  }
+  .modal-content-leave-active {
+    transition: all 0.2s ease-in;
+  }
+  .modal-content-enter-from,
+  .modal-content-leave-to {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+
+  .img-zoom {
+    transition: transform 0.2s ease-in-out;
+  }
+  .img-zoom:hover {
+    transform: scale(1.05);
+  }
+
+  /* Add to styles.css */
+tr {
+    transition: all 0.2s ease;
+  }
+  
+  .hover\:bg-gray-50:hover {
+    background-color: #f9fafb;
+  }
+  
+  .delete-link {
+    transition: color 0.2s ease;
+  }
